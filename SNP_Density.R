@@ -1,0 +1,5 @@
+library(ggplot2)
+dat<-read.csv("snpDensity.info.txt",header=TRUE, sep="\t")
+#pdf(width=9, "snpDensity.pdf")
+ggplot(dat, aes(x=reorder(bird.name, mean.snp.per.kb), y=mean.snp.per.kb))+geom_bar()+geom_bar(stat="identity")+opts(axis.text.x=theme_text(angle=-90, hjust=0))+geom_errorbar(aes(ymin=dat$mean.snp.per.kb-dat$SE, ymax=dat$mean.snp.per.kb+dat$SE, colour="red"))
+#dev.off()
