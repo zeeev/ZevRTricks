@@ -1,81 +1,92 @@
 plot.admixture<-function(directory){
-
+	
 	require(ggplot2)
 	require(plyr)
 	require(RColorBrewer)
 
-	fam<-dir(pattern="*.fam")
-
-	temp.name<-read.csv(fam, sep=" ", header=FALSE)
-	name<-temp.name$V2
-
-	new<-NULL
-	final<-NULL
+	Qmatrix <- dir(directory,pattern="*.Q")
+	fam<-dir(directory, pattern="*.fam")
+	temp.name<-read.csv(paste(directory, fam, sep=""), sep=" ", header=FALSE)
 	
-	Qmatrix <- dir(pattern="*.Q")
-
 	parse.Q.files<-function(x){
-		dat<-read.csv(file=x, sep=" ",header=FALSE)
+		dat<-read.csv(file=paste(directory,x, sep=""), sep=" ",header=FALSE)
 		ldat<-length(dat)
-		colnames(dat)<-c(paste("group",1:ldat,sep=""))
-		row.names(dat)<-name
-		dat<-cbind(row.names(dat),dat)
-		dat<-melt(dat)
-		dat<-cbind(dat, rep(paste("Krun",ldat, sep=""), length(dat[,1])))
-		colnames(dat)<-c("ID", "Group","Value","Ngroups")
-		return(dat)
-	}
+		dat<-cbind(temp.name$V1,temp.name$V2,dat)
+		colnames(dat)<-c("group_membership", "names", 1:ldat)
+		dat2<-melt(dat)	
+		dat2$Krun<-rep(ldat, length(dat2$variable))
+		colnames(dat2)<-c("Group", "Name","Admixture.Group","Value", "Krun")
+		dat2$Name<-paste(dat2$Name, dat2$Group, sep="  ")
+		return(dat2)
+	}	
 
-	plotz<-function(x){
+	order.plot.vector<-function(datframe){
+		datframe<-datframe[order(datframe$Value, decreasing=TRUE),]	
+		order.vector<-0
+		for(i in 1:length(datframe[,1])){
+				order.vector<-order.vector + as.numeric(as.character(datframe[i,3]))*as.numeric(as.character(datframe[i,4]))+i  
+		}
+
+		order.vector<-rep(order.vector, length(datframe$Value))
+		
+		return(cbind(datframe,order.vector))
+	}
 	
-		new.names<-NULL
+	plotgg<-function(datframe){
+		the.plot<-NULL
+		my.max.k<-max(as.numeric(as.character(datframe$Admixture.Group)))
+		print(head(datframe))
+		print(my.max.k)
+		my.col<-colors()[c(26,547,498,69,33,51,536)]
 		
-		facto<-function(x){
-			x<-gsub(pattern="group", replacement="",x)
-			newvector<-c(x)	
-			newvector<-as.numeric(newvector)
-			weight<-seq(10000000*length(newvector),1,length.out=length(newvector))
-			newvector<-weight*newvector
-			newvector<-paste(newvector, sep="", collapse="")
-			newvector<-gsub(newvector, pattern="[\\.]", replacement="", perl=TRUE)
-			newvector<-as.numeric(newvector)
-			return(newvector)
-		}
-		
-		groups <-gsub(pattern="group", replacement="",x[,2])
-		x<-x[order(x$ID, x$Value),]
-		print(x)
-		newx<-aggregate(x[,c(-1,-3,-4)],by=list(x$ID), facto)
-		
-		for(y in 1:length(x$ID)){
-			pat<-as.character(x[y,1])
-			hit<-newx[grep(pattern=pat, newx$Group.1),]
-			new.names<-c(new.names, hit[1,2])
-		}
-		
-		x<-cbind(x,new.names)
-		x$Groupz<-sub(x=x$Group, pattern="group", replacement="")
-		x$Groupz<-as.numeric(x$Group)
-		
-		kval<-max(as.numeric(groups))
-		print(kval)
-		par(ask=TRUE)
-		plots<-ggplot(x, aes(x=reorder(ID, Value*Groupz), y=Value, fill=Group))+geom_bar(stat="identity") +scale_fill_manual(values = rainbow(kval))+ opts(axis.text.x=theme_text(angle=-90, hjust=0))+labs(x="Indv", y="Membership")+opts(title=paste("K=", kval, sep=""))
+		if(my.max.k > 2){
+		the.plot<-ggplot(datframe, aes(x=reorder(Name, order.vector), y=Value, fill=Admixture.Group))+geom_bar(stat="identity")+scale_fill_manual(values = my.col[1:my.max.k], name="Admixture group") + opts(axis.text.x=theme_text(angle=-90, hjust=0, size=22),axis.text.y=theme_text(size=18), plot.background=theme_blank(),title=paste("K=", my.max.k, sep=""),plot.title=theme_text(size=32),legend.background=theme_rect(col = NA),strip.background = theme_blank() ,legend.position = "none"
+, plot.margin = unit(c(0,0,-1,-1), "lines"))+labs(x="", y="")
 
-return(plots)
 
+		}
+		else{
+			the.plot<-ggplot(datframe, aes(x=reorder(Name, order.vector), y=Value, fill=Admixture.Group))+geom_bar(stat="identity")+scale_fill_manual(values = my.col[1:my.max.k], name="Admixture group") + opts(axis.text.x=theme_text(angle=-90, hjust=0, size=22),axis.text.y=theme_text(size=18), plot.background=theme_blank(),title=paste("K=", my.max.k, sep=""),plot.title=theme_text(size=32),panel.margin = unit(0, "lines"),legend.background = theme_rect(col = NA)
+,legend.position = "none",strip.background = theme_blank(), plot.margin = unit(c(0,0,-1,-1), "lines"))+labs(x="bird & group", y="membership (proportion)")+labs(x="", y="")
+				}
+		return(the.plot)
 	}
 
-	cleanup<-function(x){
-		rm(x)
-	}
 
-	test<-lapply(Qmatrix, parse.Q.files)
-	out<-lapply(test, plotz)
-	return(out)
+
+
+dat<-ldply(Qmatrix, parse.Q.files)
+dat<-ddply(dat, .(Krun, Name), order.plot.vector)
+my.plots<-daply(dat, .(Krun), plotgg)
+return(my.plots)
 }
 
-#namespace<-ls()
-#namespace<-namespace[-6]
-#lapply(namepace, cleanup)
 
+
+plot.all.together<-function(file.name, plotCols, list.of.plots){
+	
+	numPlots = length(list.of.plots)
+	plotRows = ceiling(numPlots/plotCols)
+	# Fiddle with the to adjust your plot dimentions 
+	pdf(file=paste(file.name, "pdf", sep="."),bg="transparent", width=18*plotCols, height=8*plotRows)
+	
+	grid.newpage() 
+	pushViewport(viewport(layout = grid.layout(plotRows, plotCols))) 
+	vplayout <- function(x, y) 
+    viewport(layout.pos.row = x, layout.pos.col = y) 
+
+	# Make each plot, in the correct location
+	for (i in 1:numPlots) {
+    		curRow = ceiling(i/plotCols)
+    		curCol = (i-1) %% plotCols + 1
+    		print(my.plots[[i]], vp = vplayout(curRow, curCol ))
+	}
+
+	dev.off() 
+	
+}
+	
+
+
+	
+	
