@@ -1,0 +1,18 @@
+setwd(dir="~/github/ZevRTricks/manhattan_plot_VAAST_simple/")
+source(file="manhattanVAAST.R")
+manhattanVAAST
+????????pac
+??package.skeleton
+package.skeleton(name ="manhattanVAAST", namespace=FALSE)
+manhattanVAAST
+manhattanVAASTn.
+?data
+?data
+library(pegas)
+?Fst
+data(list=pegas)
+?data
+data(pegas)
+?data
+?sys.sorce
+?sys.source

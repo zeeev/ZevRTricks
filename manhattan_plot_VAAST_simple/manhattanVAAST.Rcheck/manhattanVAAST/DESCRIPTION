@@ -1,0 +1,10 @@
+Package: manhattanVAAST
+Type: Package
+Title: test
+Version: 1.0
+Date: 2012-02-08
+Author: Zev 
+Maintainer: <zev.kronenberg@gmail.com>
+Description: no
+License: none
+Built: R 2.14.0; ; 2012-02-09 02:44:14 UTC; unix

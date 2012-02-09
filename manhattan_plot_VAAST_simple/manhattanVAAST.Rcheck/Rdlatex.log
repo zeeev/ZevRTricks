@@ -1,0 +1,397 @@
+Hmm ... looks like a package
+
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010)
+ restricted \write18 enabled.
+entering extended mode
+
+(/private/var/folders/A+/A+dnn3HhFK895KLHSyHdh++++TM/-Tmp-/RtmpQ51gw5/Rd2pdf5d3
+3553/Rd2.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/url/url.sty) NOT loading ae
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/times.sty)
+NOT loading lmodern
+(/usr/local/texlive/2010/texmf-dist/tex/latex/inconsolata/inconsolata.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/etexcmds.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifluatex.sty)))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/hycolor.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/letltxmacro.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/intcalc.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+Implicit mode ON; LaTeX internals redefined
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bitset.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bigintcalc.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/atbegshi.sty))
+* hyperref using default driver hpdftex *
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/atveryend.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/uniquecounter.sty)))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 342.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 342.
+
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/latin1.def))
+Writing index file Rd2.idx
+No file Rd2.aux.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/refcount.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/inconsolata/t1fi4.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/t1phv.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def)
+Underfull \vbox (badness 10000) has occurred while \output is active [1{/usr/lo
+cal/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (21.83638pt too wide) in paragraph at lines 49--51
+[]\T1/ptm/m/n/10 Maintainer: <zev.kronenberg@gmail.com> Lab page: <http://www.y
+andell-lab.org/software/vaast.html> 
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (389.78088pt too wide) in paragraph at lines 79--79
+ []\T1/fi4/m/n/10 manhattanVAAST(n.features=23000, sig.level=0.05, vaast.simple
+, title, sig.line = TRUE, axis.text = TRUE, custom.xlab = "index", sig.hjust = 
+0, sig.vjust = 0)[] 
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
+No file Rd2.ind.
+[4] (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2010/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2010/texmf-dist/fonts/
+enc/dvips/inconsolata/fi4-ec.enc}</usr/local/texlive/2010/texmf-dist/fonts/type
+1/public/inconsolata/Inconsolata.pfb></usr/local/texlive/2010/texmf-dist/fonts/
+type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/u
+tmr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (4 pages, 79443 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2010] (kpathsea + Thai support).
+Scanning input file ./Rd2.idx....done (6 entries accepted, 0 rejected).
+Sorting entries....done (17 comparisons).
+Generating output file ./Rd2.ind....done (17 lines written, 0 warnings).
+Output written in ./Rd2.ind.
+Transcript written in ./Rd2.ilg.
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010)
+ restricted \write18 enabled.
+entering extended mode
+
+(/private/var/folders/A+/A+dnn3HhFK895KLHSyHdh++++TM/-Tmp-/RtmpQ51gw5/Rd2pdf5d3
+3553/Rd2.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/url/url.sty) NOT loading ae
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/times.sty)
+NOT loading lmodern
+(/usr/local/texlive/2010/texmf-dist/tex/latex/inconsolata/inconsolata.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/etexcmds.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifluatex.sty)))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/hycolor.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/letltxmacro.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/intcalc.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+Implicit mode ON; LaTeX internals redefined
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bitset.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bigintcalc.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/atbegshi.sty))
+* hyperref using default driver hpdftex *
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/atveryend.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/uniquecounter.sty)))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 342.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 342.
+
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/latin1.def))
+Writing index file Rd2.idx
+(./Rd2.aux) (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/refcount.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./Rd2.out) (./Rd2.out)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/inconsolata/t1fi4.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/t1phv.fd) (./Rd2.toc)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def) [1{/usr/local/texl
+ive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (21.83638pt too wide) in paragraph at lines 49--51
+[]\T1/ptm/m/n/10 Maintainer: <zev.kronenberg@gmail.com> Lab page: <http://www.y
+andell-lab.org/software/vaast.html> 
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (389.78088pt too wide) in paragraph at lines 79--79
+ []\T1/fi4/m/n/10 manhattanVAAST(n.features=23000, sig.level=0.05, vaast.simple
+, title, sig.line = TRUE, axis.text = TRUE, custom.xlab = "index", sig.hjust = 
+0, sig.vjust = 0)[] 
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
+(./Rd2.ind [4]
+
+LaTeX Font Warning: Font shape `T1/fi4/m/it' undefined
+(Font)              using `T1/fi4/m/n' instead on input line 14.
+
+[5]) (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2010/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2010/texmf-dist/fonts/
+enc/dvips/inconsolata/fi4-ec.enc}</usr/local/texlive/2010/texmf-dist/fonts/type
+1/public/inconsolata/Inconsolata.pfb></usr/local/texlive/2010/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (5 pages, 88461 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2010] (kpathsea + Thai support).
+Scanning input file ./Rd2.idx....done (6 entries accepted, 0 rejected).
+Sorting entries....done (17 comparisons).
+Generating output file ./Rd2.ind....done (17 lines written, 0 warnings).
+Output written in ./Rd2.ind.
+Transcript written in ./Rd2.ilg.
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010)
+ restricted \write18 enabled.
+entering extended mode
+
+(/private/var/folders/A+/A+dnn3HhFK895KLHSyHdh++++TM/-Tmp-/RtmpQ51gw5/Rd2pdf5d3
+3553/Rd2.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/url/url.sty) NOT loading ae
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/times.sty)
+NOT loading lmodern
+(/usr/local/texlive/2010/texmf-dist/tex/latex/inconsolata/inconsolata.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/etexcmds.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifluatex.sty)))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/hycolor.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/letltxmacro.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/intcalc.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+Implicit mode ON; LaTeX internals redefined
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bitset.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bigintcalc.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/atbegshi.sty))
+* hyperref using default driver hpdftex *
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/atveryend.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/uniquecounter.sty)))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 342.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 342.
+
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/latin1.def))
+Writing index file Rd2.idx
+(./Rd2.aux) (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/refcount.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./Rd2.out) (./Rd2.out)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/inconsolata/t1fi4.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/t1phv.fd) (./Rd2.toc)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def)
+Underfull \vbox (badness 10000) has occurred while \output is active [1{/usr/lo
+cal/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (21.83638pt too wide) in paragraph at lines 49--51
+[]\T1/ptm/m/n/10 Maintainer: <zev.kronenberg@gmail.com> Lab page: <http://www.y
+andell-lab.org/software/vaast.html> 
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/utf8.def)
+Overfull \hbox (389.78088pt too wide) in paragraph at lines 79--79
+ []\T1/fi4/m/n/10 manhattanVAAST(n.features=23000, sig.level=0.05, vaast.simple
+, title, sig.line = TRUE, axis.text = TRUE, custom.xlab = "index", sig.hjust = 
+0, sig.vjust = 0)[] 
+[2] [3] (./Rd2.ind [4]
+
+LaTeX Font Warning: Font shape `T1/fi4/m/it' undefined
+(Font)              using `T1/fi4/m/n' instead on input line 14.
+
+[5]) (./Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2010/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2010/texmf-dist/fonts/
+enc/dvips/inconsolata/fi4-ec.enc}</usr/local/texlive/2010/texmf-dist/fonts/type
+1/public/inconsolata/Inconsolata.pfb></usr/local/texlive/2010/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (5 pages, 88766 bytes).
+Transcript written on Rd2.log.
+Saving output to 'manhattanVAAST-manual.pdf' ...
+Done
+You may want to clean up by 'rm -rf /var/folders/A+/A+dnn3HhFK895KLHSyHdh++++TM/-Tmp-//RtmpQ51gw5/Rd2pdf5d33553'

@@ -1,0 +1,66 @@
+* using log directory ‘/Users/zev/github/ZevRTricks/manhattan_plot_VAAST_simple/manhattanVAAST.Rcheck’
+* using R version 2.14.0 alpha (2011-10-13 r57241)
+* using platform: x86_64-apple-darwin9.8.0 (64-bit)
+* using session charset: UTF-8
+* checking for file ‘manhattanVAAST/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘manhattanVAAST’ version ‘1.0’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking whether package ‘manhattanVAAST’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  none
+Standardizable: FALSE
+* checking top-level files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking for unstated dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... NOTE
+prepare_Rd: manhattanVAAST-package.Rd:44-46: Dropping empty section \examples
+prepare_Rd: manhattanVAAST.Rd:46-52: Dropping empty section \value
+prepare_Rd: manhattanVAAST.Rd:59-61: Dropping empty section \note
+prepare_Rd: manhattanVAAST.Rd:53-55: Dropping empty section \references
+prepare_Rd: manhattanVAAST.Rd:65-67: Dropping empty section \seealso
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... WARNING
+Codoc mismatches from documentation object 'manhattanVAAST':
+manhattanVAAST
+  Code: function(n.features, sig.level, vaast.simple, title, sig.line =
+                 TRUE, axis.text = TRUE, custom.xlab = "index",
+                 sig.hjust = 0, sig.vjust = 0)
+  Docs: function(n.features = 23000, sig.level = 0.05, vaast.simple,
+                 title, sig.line = TRUE, axis.text = TRUE, custom.xlab
+                 = "index", sig.hjust = 0, sig.vjust = 0)
+  Mismatches in argument default values:
+    Name: 'n.features' Code:  Docs: 23000
+    Name: 'sig.level' Code:  Docs: 0.05
+
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... OK
+* checking PDF version of manual ... OK
+WARNING: There were 2 warnings, see
+  ‘/Users/zev/github/ZevRTricks/manhattan_plot_VAAST_simple/manhattanVAAST.Rcheck/00check.log’
+for details
