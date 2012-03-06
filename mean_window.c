@@ -20,14 +20,13 @@ void gslide_mean(double *ypts, double *xpts, int *nxpts, int *window_size, doubl
 	   if(lower < xpts[0]) lower = xpts[0];
 	
 		for(j = 0; j < *nxpts; j++){
-			if(xpts[j] > upper) break;
+			if(xpts[j] > upper) continue;
 			if(xpts[j] < lower) continue;
 			total += ypts[j];	
 			count++;
 		}
 		
 		double ave = total / count;
-		Rprintf("test:Yvals %f\n", ave);
 		results[i] = ave;
 	}			
 }
