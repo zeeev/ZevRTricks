@@ -1,5 +1,7 @@
 plot.admixture<-function(directory){
 	
+	require(reshape2)
+	require(grid)
 	require(ggplot2)
 	require(plyr)
 	require(RColorBrewer)
@@ -8,57 +10,71 @@ plot.admixture<-function(directory){
 	fam<-dir(directory, pattern="*.fam")
 	temp.name<-read.csv(paste(directory, fam, sep=""), sep=" ", header=FALSE)
 	
-	parse.Q.files<-function(x){
+imax<-function(x,n){
+	tmp<-as.data.frame(cbind(x, 1:length(x)))
+	colnames(tmp)<-c("val","index")
+	stmp<-tmp[order(tmp$val, decreasing=TRUE),]
+	return(stmp$index[n])
+}
+vmax<-function(x,n){
+	tmpd<-sort(x, decreasing=TRUE)
+	return(tmpd[n])
+}
+
+parse.Q.files<-function(x){
 		dat<-read.csv(file=paste(directory,x, sep=""), sep=" ",header=FALSE)
 		ldat<-length(dat)
-		dat<-cbind(temp.name$V1,temp.name$V2,dat)
-		colnames(dat)<-c("group_membership", "names", 1:ldat)
-		dat2<-melt(dat)	
-		dat2$Krun<-rep(ldat, length(dat2$variable))
-		colnames(dat2)<-c("Group", "Name","Admixture.Group","Value", "Krun")
-		dat2$Name<-paste(dat2$Name, dat2$Group, sep="  ")
+		
+	outter <- NULL	
+	
+	for(i in 1:ldat){	
+		outter<-c(outter,list(apply(dat, 1, FUN=imax, n=i)))
+		outter<-c(outter,list(apply(dat, 1, FUN=vmax, n=i)))
+	}
+
+		dat<-cbind(temp.name$V2,dat)
+		colnames(dat)<-c( "names", 1:ldat)
+
+		dat<-dat[do.call(order, outter),]
+		dat$ov<-1:length(dat$names)
+	
+		dat2<-melt(dat, id.vars=c("names", "ov"))	
+		
+		
+		dat2$Krun<-ldat
+		colnames(dat2)<-c("Name","ov","Admixture.Group","Value", "Krun")
+
+		
 		return(dat2)
 	}	
 
-	order.plot.vector<-function(datframe){
-		datframe<-datframe[order(datframe$Value, decreasing=TRUE),]	
-		order.vector<-0
-		for(i in 1:length(datframe[,1])){
-				order.vector<-order.vector + as.numeric(as.character(datframe[i,3]))*as.numeric(as.character(datframe[i,4]))+i  
-		}
 
-		order.vector<-rep(order.vector, length(datframe$Value))
-		
-		return(cbind(datframe,order.vector))
-	}
 	
-	plotgg<-function(datframe){
-		the.plot<-NULL
+plotgg<-function(datframe){
+	
 		my.max.k<-max(as.numeric(as.character(datframe$Admixture.Group)))
-		print(head(datframe))
-		print(my.max.k)
-		my.col<-colors()[c(26,547,498,69,33,51,536)]
-		
-		if(my.max.k > 2){
-		the.plot<-ggplot(datframe, aes(x=reorder(Name, order.vector), y=Value, fill=Admixture.Group))+geom_bar(stat="identity")+scale_fill_manual(values = my.col[1:my.max.k], name="Admixture group") + opts(axis.text.x=theme_text(angle=-90, hjust=0, size=22),axis.text.y=theme_text(size=18), plot.background=theme_blank(),title=paste("K=", my.max.k, sep=""),plot.title=theme_text(size=32),legend.background=theme_rect(col = NA),strip.background = theme_blank() ,legend.position = "none"
-, plot.margin = unit(c(0,0,-1,-1), "lines"))+labs(x="", y="")
+	
+	
+		datframe<-datframe[order(datframe$ov),]
+		datframe$Name<-factor(datframe$Name, levels=datframe$Name, ordered=TRUE)
+	
+		my.col<-colors()[c(26,547,498,69,33,51,536,100,76,200,300,400,450)]
 
+	  	the.plot<-ggplot(datframe, aes(x=Name, y=Value, fill=Admixture.Group))+geom_bar(stat="identity")
+		 the.plot<-the.plot+scale_fill_manual(values = my.col[1:my.max.k], name="Admixture group")
+		the.plot<-the.plot+theme_classic(18)
+		the.plot<-the.plot+theme(axis.text.x = element_text(angle = 90, hjust = 1))
+		the.plot<-the.plot+labs(x="Individual", y="fraction ancestry")
+		the.plot
 
-		}
-		else{
-			the.plot<-ggplot(datframe, aes(x=reorder(Name, order.vector), y=Value, fill=Admixture.Group))+geom_bar(stat="identity")+scale_fill_manual(values = my.col[1:my.max.k], name="Admixture group") + opts(axis.text.x=theme_text(angle=-90, hjust=0, size=22),axis.text.y=theme_text(size=18), plot.background=theme_blank(),title=paste("K=", my.max.k, sep=""),plot.title=theme_text(size=32),panel.margin = unit(0, "lines"),legend.background = theme_rect(col = NA)
-,legend.position = "none",strip.background = theme_blank(), plot.margin = unit(c(0,0,-1,-1), "lines"))+labs(x="bird & group", y="membership (proportion)")+labs(x="", y="")
-				}
-		return(the.plot)
 	}
 
+fdat<-ldply(Qmatrix, parse.Q.files, .inform=TRUE)
 
+my.plots<-dlply(fdat, .(Krun), plotgg)
 
-
-dat<-ldply(Qmatrix, parse.Q.files)
-dat<-ddply(dat, .(Krun, Name), order.plot.vector)
-my.plots<-daply(dat, .(Krun), plotgg)
 return(my.plots)
+
 }
 
 
@@ -87,6 +103,5 @@ plot.all.together<-function(file.name, plotCols, list.of.plots){
 }
 	
 
-
-	
+	results<- plot.admixture("/Users/zev/Documents/projects/human_diversity/admixture/")
 	
