@@ -102,6 +102,7 @@ plot.all.together<-function(file.name, plotCols, list.of.plots){
 	
 }
 	
-
-	results<- plot.admixture("/Users/zev/Documents/projects/human_diversity/admixture/")
-	
+# example of running the code:
+# results<- plot.admixture("/Users/zev/Documents/projects/human_diversity/admixture/")
+# example of pulling a subplot (K=5):
+# results$`5`
